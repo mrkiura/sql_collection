@@ -1,0 +1,1 @@
+select artist.name, count(*) as album_hits from artist left join album using(artistid) group by artist.name order by album_hits desc limit 3;
